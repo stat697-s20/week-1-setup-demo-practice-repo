@@ -12,9 +12,9 @@ Approach: Use a null data step and business logic to write to the log
 
 
 data _null_;
-    do i = 1 to 5000;
-        if mod(i,30) = 0 then put 'Fizz';
-        else if mod(i, 50) = 0 then put 'Buzz';
+    do i = 1 to 50;
+        if mod(i,3) = 0 then put 'Fizz';
+        else if mod(i, 5) = 0 then put 'Buzz';
         else put i=;
     end;
 run;
